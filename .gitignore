@@ -1,0 +1,6 @@
+.DS_Store
+._*
+__MACOSX/
+
+# Local GitHub Release artifacts. Upload these from dist/ instead of committing them.
+/dist/
