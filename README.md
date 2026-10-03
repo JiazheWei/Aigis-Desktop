@@ -8,11 +8,71 @@
 - 使用 Sprite Sheet v2（`1536 × 2288`）
 - 保留并公开 16 个方向的视线素材
 
-![空闲动画](previews/states/idle.gif)
+## 九种动画案例
 
-![执行任务动画](previews/states/working-dance.gif)
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <strong>1. 空闲站立、偶尔眨眼</strong><br>
+      <code>idle</code><br><br>
+      <img src="previews/states/idle.gif" width="220" alt="埃吉斯空闲站立并眨眼">
+    </td>
+    <td align="center" width="33%">
+      <strong>2. 向右移动</strong><br>
+      <code>running-right</code><br><br>
+      <img src="previews/states/move-right.gif" width="220" alt="埃吉斯向右移动">
+    </td>
+    <td align="center" width="33%">
+      <strong>3. 向左移动</strong><br>
+      <code>running-left</code><br><br>
+      <img src="previews/states/move-left.gif" width="220" alt="埃吉斯向左移动">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <strong>4. 招手</strong><br>
+      <code>waving</code><br><br>
+      <img src="previews/states/waving.gif" width="220" alt="埃吉斯招手">
+    </td>
+    <td align="center" width="33%">
+      <strong>5. 跳跃互动</strong><br>
+      <code>jumping</code><br><br>
+      <img src="previews/states/jumping.gif" width="220" alt="埃吉斯跳跃">
+    </td>
+    <td align="center" width="33%">
+      <strong>6. 失败 / 阻塞</strong><br>
+      <code>failed</code><br><br>
+      <img src="previews/states/failed.gif" width="220" alt="埃吉斯失败或阻塞状态">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <strong>7. 等待输入</strong><br>
+      <code>waiting</code><br><br>
+      <img src="previews/states/waiting.gif" width="220" alt="埃吉斯等待输入">
+    </td>
+    <td align="center" width="33%">
+      <strong>8. 执行任务、左右舞动</strong><br>
+      <code>running</code><br><br>
+      <img src="previews/states/working-dance.gif" width="220" alt="埃吉斯执行任务时左右舞动">
+    </td>
+    <td align="center" width="33%">
+      <strong>9. 检查 / 完成提示</strong><br>
+      <code>review</code><br><br>
+      <img src="previews/states/review.gif" width="220" alt="埃吉斯检查或完成提示状态">
+    </td>
+  </tr>
+</table>
 
-## 16 方向视线说明
+<details>
+  <summary><strong>查看完整精灵帧总览</strong></summary>
+  <br>
+  <img src="previews/all-states.png" alt="埃吉斯全部动画状态的逐帧总览">
+</details>
+
+## 16 方向视角
+
+![埃吉斯 16 方向视角总览](previews/look-directions.png)
 
 完整的 16 方向视线帧同时保存在：
 
@@ -23,22 +83,6 @@
 > **16 方向素材不等于普通鼠标视线跟随。**
 >
 > 当前项目不包含系统级鼠标监听，也没有修改 ChatGPT/Codex 客户端。因此，埃吉斯不会跟随普通桌面鼠标持续转动视线。是否调用这些方向帧由宿主客户端提供的交互目标决定；这些素材仍保留用于客户端支持的场景和后续开发。
-
-## 动画内容
-
-v2 图集包含 9 个行为动画行：
-
-1. `idle`：空闲、偶尔眨眼
-2. `running-right`：向右移动
-3. `running-left`：向左移动
-4. `waving`：挥手
-5. `jumping`：跳跃
-6. `failed`：失败/受阻
-7. `waiting`：等待输入
-8. `running`：执行任务时左右舞动
-9. `review`：检查/完成提示
-
-另有两行共 16 帧视线方向素材。所有状态可查看 [`previews/all-states.png`](previews/all-states.png) 和 [`previews/states/`](previews/states/)。
 
 ## 下载
 
